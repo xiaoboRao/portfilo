@@ -1,6 +1,6 @@
+@import "./global.scss";
 .app {
   height: 100vh;
-  
   .sections {
     overflow: scroll;
     height: calc(100vh - 70px);
@@ -10,6 +10,11 @@
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;  //for firefox
+
+    @include mobile{
+      height: calc(100vh - 45px);
+      top: 45px;
+    }
     &::-webkit-scrollbar{
         display: none
     };
@@ -17,7 +22,10 @@
      > *{
       height: calc(100vh - 70px);
       scroll-snap-align: end;
-
+      @include mobile{
+        height: calc(100vh - 45px);
+        top: 45px;
+      }
     }
   }
 }

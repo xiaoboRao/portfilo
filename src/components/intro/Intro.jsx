@@ -1,18 +1,16 @@
-import React, { Component, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { init } from "ityped";
 import "./intro.scss";
 
 export default function Intro() {
   const textRef = useRef();
-
-  console.log(textRef, "--------");
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
       typeSpeed: 300,
       backSpeed: 80,
       backDelay: 2000,
-      strings: ["Front End Developer"],
+      strings: [" End Developer"],
     });
   }, []);
   return (
@@ -27,7 +25,8 @@ export default function Intro() {
           <h2>Hi There I'm</h2>
           <h1> Bob</h1>
           <h3>
-            <span ref={textRef}></span>{" "}
+            Front 
+            <span ref={textRef}></span>
           </h3>
         </div>
         <a href="#portfilo">
