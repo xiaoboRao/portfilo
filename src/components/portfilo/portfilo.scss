@@ -58,6 +58,9 @@
         text-align: left;
        
         &:hover {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: $mainColor;
           cursor: pointer;
           > img {
